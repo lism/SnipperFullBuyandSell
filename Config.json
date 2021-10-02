@@ -1,6 +1,6 @@
 {
-   "walletAddress": "Yor Wallet Address",
-   "walletPrivateKey": "You Wallet Key",
+   "walletAddress": "0xb0f603C7A53AeaEDD44994b053Ca8812973bD3F3",
+   "walletPrivateKey": "287d71fd469356a982ed615931d060621964fd80ac56ec9b4b98a73d470682eb",
    "pancakeSwapRouterAddress": "0x10ED43C718714eb63d5aA57B78B54704E256024E",
    "pancakeSwapFactoryAddress": "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73",
    "amountToSpendPerSnipe": "0.0001",
