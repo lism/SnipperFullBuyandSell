@@ -116,6 +116,7 @@ tokenNameABI = json.loads(
 
 
 def Buy(tokenAddress, tokenSymbol):
+    global isSell
     if (tokenAddress != None):
         tokenToBuy = web3.toChecksumAddress(tokenAddress)
         spend = web3.toChecksumAddress("0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c")  # wbnb contract address
@@ -178,6 +179,8 @@ print("")  # line break
 
 
 def foundToken(event):
+    global numTokensDetected
+    global numTokensBought
     try:
         jsonEventContents = json.loads(Web3.toJSON(event))
         if (jsonEventContents['args'][
@@ -191,8 +194,7 @@ def foundToken(event):
             tokenSymbol = getTokenName.functions.symbol().call()
             print(
                 style.YELLOW + currentTimeStamp + " [Token] New potential token detected: " + style.CYAN + tokenName + " (" + tokenSymbol + "): " + style.MAGENTA + tokenAddress + style.RESET)
-            global numTokensDetected
-            global numTokensBought
+            
             numTokensDetected = numTokensDetected + 1
             updateTitle()
 
